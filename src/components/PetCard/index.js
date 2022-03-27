@@ -1,17 +1,31 @@
-import { Col, Card } from "react-bootstrap";
+import {
+  Button,
+  ButtonGroup,
+  ButtonToolbar,
+  Col,
+  Card
+} from "react-bootstrap";
 
 function PetCard(props) {
-  const petAttributes = props.petAttributes;
+  const pet = props.petAttributes;
 
   return (
     <Col md="auto">
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={petAttributes.url}  />
+        <Card.Img variant="top" src={pet.url}  />
         <Card.Body>
-          <Card.Title>{petAttributes.name} - {petAttributes.breed}</Card.Title>
+          <Card.Title>{pet.name} - {pet.breed}</Card.Title>
           <Card.Text>
-            {petAttributes.description}
+            {pet.description}
           </Card.Text>
+          <ButtonToolbar aria-label="Toolbar with button groups">
+            <ButtonGroup className="me-2" aria-label="First group">
+              <Button href={`pets/${pet.id}`} variant="info">Edit</Button>
+            </ButtonGroup>
+            <ButtonGroup className="me-2" aria-label="Second group">
+              <Button variant="danger">Delete</Button>
+            </ButtonGroup>
+          </ButtonToolbar>
         </Card.Body>
       </Card>
       <br />
