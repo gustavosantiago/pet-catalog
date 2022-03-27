@@ -9,11 +9,9 @@ class PetsList extends Component {
   }
 
   componentDidMount() {
-    fetch(`http://127.0.0.1:3030/?limit=10&page=0`)
+    fetch(`http://127.0.0.1:3030/pets?limit=15&page=0`)
       .then(res => res.json())
       .then(json => this.setState({ data: json }));
-
-    console.log('data: ', this.state.data)
   }
 
   render() {
