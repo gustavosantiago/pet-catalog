@@ -1,4 +1,4 @@
-import { Component } from "react";
+import Component from "react";
 import { Container, Row }  from "react-bootstrap";
 import PetCard from "../PetCard";
 
@@ -21,7 +21,7 @@ class PetsList extends Component {
           {this.state.data.map(pet => (
             <PetCard
               key={pet.id}
-              petAttributes={pet}
+              pet={pet}
             />
           ))}
         </Row>
