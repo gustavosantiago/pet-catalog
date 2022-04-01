@@ -1,8 +1,8 @@
-import Component from "react";
+import React from "react";
 import { Container, Row }  from "react-bootstrap";
 import PetCard from "../PetCard";
 
-class PetsList extends Component {
+class PetList extends React.Component {
   constructor() {
     super();
     this.state = { data: [] };
@@ -30,4 +30,4 @@ class PetsList extends Component {
   }
 }
 
-export default PetsList;
+export default PetList;

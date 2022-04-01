@@ -1,22 +1,29 @@
-import Component from "react";
+import React from "react";
+import PetForm from "../PetForm"
 
-class PetEdit extends Component {
+class PetEdit extends React.Component {
   constructor() {
     super();
-    this.state = { data: [] };
+    this.state = { data: {} };
   }
 
   componentDidMount() {
-    fetch(`http://127.0.0.1:3030/pets/${1}`)
+    let { id } = useParams();
+    console.log(id)
+    fetch(`http://127.0.0.1:3030/pets/${2}`)
       .then(res => res.json())
       .then(json => this.setState({ data: json }));
   }
 
   render () {
-    console.log("pet", this.state.data)
+    const pet = this.state.data;
+
     return(
       <div>
-        <h1>Edit Pet</h1>
+        <h1>Edit Pet - {pet.name} </h1>
+        <PetForm
+          pet={pet}
+        />
       </div>
     );
   }

@@ -7,7 +7,7 @@ function RenderNavbar() {
       <Navbar.Brand href="/">Pet Catalog</Navbar.Brand>
       <Nav className="me-auto">
         <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/register">Register Pet</Nav.Link>
+        <Nav.Link href="/pets/new">Register Pet</Nav.Link>
       </Nav>
       </Container>
     </Navbar>

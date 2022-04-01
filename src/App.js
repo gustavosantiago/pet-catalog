@@ -2,7 +2,7 @@ import { Component } from "react";
 import './App.css';
 import RenderNavbar from './components/RenderNavbar';
 import PetEdit from './components/PetEdit';
-import PetsList from './components/PetsList';
+import PetList from './components/PetList';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 class App extends Component {
@@ -15,8 +15,8 @@ class App extends Component {
 
         <BrowserRouter>
         <Routes>
-          <Route path="/" element={<PetsList />} />
-          <Route path="/pets/:id" element={<PetEdit />} />
+          <Route path="/" element={<PetList />} />
+          <Route path="/pets/:id/edit" element={<PetEdit />} />
         </Routes>
         </BrowserRouter>
       </div>
