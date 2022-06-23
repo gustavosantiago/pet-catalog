@@ -14,12 +14,12 @@ class PetCard extends React.Component {
 
     return(
       <Col md="auto">
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src={pet.url}  />
+        <Card style={{ width: '22rem' }}>
+          <Card.Img variant="top" src={pet.attributes.url}  />
           <Card.Body>
-            <Card.Title>{pet.name} - {pet.breed}</Card.Title>
+            <Card.Title>{pet.attributes.name} - {pet.attributes.breed}</Card.Title>
             <Card.Text>
-              {pet.description}
+              {pet.attributes.description}
             </Card.Text>
             <ButtonToolbar aria-label="Toolbar with button groups">
               <ButtonGroup className="me-2" aria-label="First group">

@@ -9,9 +9,12 @@ class PetList extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://127.0.0.1:3030/pets?limit=15&page=0`)
-      .then(res => res.json())
-      .then(json => this.setState({ data: json }));
+    fetch(`http://127.0.0.1:3000/api/v1/pets?limit=15`)
+      .then(response => response.json())
+      .then(json => this.setState({ data: json.data }))
+      .catch(error => {
+        this.setState({ data: [] })
+      });
   }
 
   render() {

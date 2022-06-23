@@ -8,9 +8,9 @@ class PetEdit extends React.Component {
   }
 
   componentDidMount() {
-    let { id } = useParams();
-    console.log(id)
-    fetch(`http://127.0.0.1:3030/pets/${2}`)
+    // let { id } = useParams();
+    // console.log(id)
+    fetch(`http://127.0.0.1:3030/pets/${1}`)
       .then(res => res.json())
       .then(json => this.setState({ data: json }));
   }
